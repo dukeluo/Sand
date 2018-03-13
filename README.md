@@ -1,8 +1,13 @@
-# starSets
+
+## 练手的一些小程序
 
 
-some small projects I practiced
+| 名称            | 语言       |
+|----------------|------------|
+| 图片转化成字符画  |Python		|
+| 打印蛇形矩阵     |C			  |
 
 
 
-个人博客 [DukeLuo's blog](http://dukeluo.com/)
+
+博客 [DukeLuo's blog](http://dukeluo.com/)
