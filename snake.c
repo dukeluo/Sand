@@ -1,7 +1,8 @@
 /* 
  * name:   Snake Game
- * author: Luo Huan
+ * author: Duke
  * date:   18.03.28
+ * github: https://github.com/DukeLuo/starSets
  */
 
 #include <stdio.h>
@@ -83,7 +84,7 @@ void display_board() {
             printf("\n");
         }
     }
-    printf("Developed by Luo Huan\n");
+    printf("Developed by Duke\n");
     printf("\n");
 }
 

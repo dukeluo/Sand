@@ -10,4 +10,4 @@
 
 
 
-博客 [DukeLuo's blog](http://dukeluo.com/)
+博客 [DukeLuo's blog](http://dukeluo.me/)
