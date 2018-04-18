@@ -1,6 +1,6 @@
 /*
  * Binary Search Tree
- * Sample Table
+ * Symbol table
  */
 
 import edu.princeton.cs.algs4.Queue;
