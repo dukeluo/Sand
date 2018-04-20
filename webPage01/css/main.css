@@ -7,10 +7,12 @@ h1 {
 
 h2 {
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 h3 {
   font-size: 24px;
+  text-transform: uppercase;
 }
 
 p {
@@ -25,6 +27,16 @@ button {
   color: #eee;
 }
 
+.button {
+  border: 2px solid #fff;
+  width: 12em;
+  height: 2em;
+  margin-bottom: 0.5em;
+  padding-top: 0.8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .hr {
   width: 100%;
   height: 2px;
@@ -37,6 +49,10 @@ button {
   font-size: 18px;
 }
 
+.fas {
+  font-size: 2em;
+  color: #fff;
+}
 .cleanfix::after {
   content: ".";
   display: block;
@@ -110,11 +126,23 @@ nav ul li a {
 }
 
 #banner .inner .more {
-  margin-top: 280px;
+  margin-top: 300px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+
 }
 
-#banner button {
-  padding: 14px 40px;
+#banner .inner .fas {
+  margin-top: 10px;
+}
+#banner .button {
+  margin: 0 auto;
+  border: none;
+  background-color: #333;
+  color: #eee;
+  width: 8em;
 }
 
 .green-section {
@@ -145,6 +173,17 @@ nav ul li a {
   margin: 30px;
 }
 
+.icon-group .icon .fas {
+  font-size: 3em;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 10px 10px;
+  padding-top: 5px;
+  text-align: center;
+  transform: rotate(-45deg);
+}
+
 .gray-section {
   background: #34393c;
   color: #fff;
@@ -164,6 +203,7 @@ nav ul li a {
 }
 
 .img-section img {
+  display: block;
   width: 100%;
 }
 
@@ -239,6 +279,39 @@ nav ul li a {
   background-color: rgba(0, 0, 0, 0.24);
 }
 
+.transparent-section .wrapper {
+  background-color: transparent;
+  color: #fff;
+}
+
+.transparent-section .wrapper .inner {
+  margin: 8em auto;
+}
+
+.transparent-section .wrapper .inner .text-content {
+  box-sizing: border-box;
+  width: 60%;
+  float: left;
+  padding-right: 3em;
+}
+
+.transparent-section .wrapper .inner .button-group {
+  box-sizing: border-box;
+  width: 40%;
+  float: left;
+  list-style: none;
+  height: 8em;
+}
+
+.transparent-section .button-group .button {
+  margin: 1em auto;
+}
+
+.button.special {
+  border: none;
+  background-color: #ed4933;
+}
+
 footer {
   background: #333;
   color: #fff;
@@ -260,6 +333,10 @@ footer .share-group {
 .share-group li {
   display: inline-block;
   padding: 10px;
+}
+
+.share-group li .fab {
+  font-size: 2em;
 }
 
 .copy {
