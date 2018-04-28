@@ -2,7 +2,7 @@
  * name:   Snake Game
  * author: Duke
  * date:   18.03.28
- * github: https://github.com/DukeLuo/starSets
+ * github: https://github.com/DukeLuo/Sand
  */
 
 #include <stdio.h>
