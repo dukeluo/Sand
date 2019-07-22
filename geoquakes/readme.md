@@ -1,4 +1,7 @@
-<div style="text-align:center"><img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60"> </div>
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60">
+</p>
+
 # [GeoQuakes](https://github.com/sf-wdi-24/geoquakes)
 
 **Objective:** Display data from the USGS (United States Geological Survey) on significant earthquakes (M4.0 or greater) from the past week. The goal is to list information about each quake and display a Google Map with a pin at the epicenter of each quake.
