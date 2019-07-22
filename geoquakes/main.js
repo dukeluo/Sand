@@ -25,7 +25,7 @@ $(function() {
     }
 
     function renderTitle(titles) {
-        var source = "<li class='list-group-item quake-title'> {{title}} </li>";
+        var source = "<li class='list-group-item quake-title'><p>{{title}} <small>({{hoursAgo}} hours ago)</small></p></li>";
         var template = Handlebars.compile(source);
         var html = "";
 
@@ -64,7 +64,10 @@ $(function() {
     $.getJSON(quakesUrl, function (data) {
         var earthquakes = generateEarthquakeObjects(data);
         var earthquakeTitles = earthquakes.map(function (item) {
-            return {"title": getEarthquakeProperty("title", item)};
+            return {
+                "title": getEarthquakeProperty("title", item),
+                "hoursAgo": Math.floor((Date.now()-getEarthquakeProperty("time", item))/3600000)
+            };
         });
 
         renderTitle(earthquakeTitles);
