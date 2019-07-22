@@ -43,12 +43,20 @@ $(function() {
         });
     }
 
-    function addPins(locations) {
-        locations.map(function(location, i) {
-            return new google.maps.Marker({
-                position: location,
-                icon: "./earthquake.png",
+    function addPins(earthquakes) {
+        var calcLevelColor = function (mag) {
+            var color = ["yellow", "orange", "red"];
+            var i = Math.floor(mag-4.0);
+
+            return i <= 2 ? color[i] : color[2];
+        };
+
+        earthquakes.forEach(function (earthquake) {
+            new google.maps.Marker({
+                position: new google.maps.LatLng(earthquake.lat, earthquake.lng),
                 map: map,
+                title: earthquake.title,
+                icon: "./earthquake-"+calcLevelColor(earthquake.mag)+".svg"
             });
         });
     }
@@ -58,15 +66,9 @@ $(function() {
         var earthquakeTitles = earthquakes.map(function (item) {
             return {"title": getEarthquakeProperty("title", item)};
         });
-        var earthquakeLocations = earthquakes.map(function (item) {
-            return {
-                "lat": getEarthquakeProperty("lat", item),
-                "lng": getEarthquakeProperty("lng", item)
-            };
-        });
 
         renderTitle(earthquakeTitles);
-        addPins(earthquakeLocations);
+        addPins(earthquakes);
     });
     
     initMap();
