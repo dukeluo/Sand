@@ -84,8 +84,6 @@ class GroceryList extends React.Component {
 
   render() {
     let groceriesComponents = [],
-        newProductInput,
-        newProductAddButton,
         clearListButton;
     for(var index = 0; index < this.state.groceries.length; index++) {
       groceriesComponents.push(
@@ -96,8 +94,6 @@ class GroceryList extends React.Component {
       );
     }
 
-    newProductInput = <input className='new-item' type="text" onChange={this.inputChanged}/>;
-    newProductAddButton = <button className='add-product' onClick={this.addGroceryItem}>Add new Product</button>;
     clearListButton = <button className='clear-list' onClick={this.clearList}>Clear the List</button>;
 
     return (
@@ -105,8 +101,7 @@ class GroceryList extends React.Component {
         <ul>
           {groceriesComponents}
         </ul>
-        {newProductInput}
-        {newProductAddButton}
+        <AddGroceryItem onInputChange={this.inputChanged} onInputSubmit={this.addGroceryItem} />
         {clearListButton}
       </div>
     );
@@ -125,6 +120,24 @@ class GroceryListItem extends React.Component {
         {this.props.grocery.name}
       </li>
     );
+  }
+}
+
+class AddGroceryItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let newProductInput = <input className='new-item' type="text" onChange={this.props.onInputChange}/>;
+    let newProductAddButton = <button className='add-product' onClick={this.props.onInputSubmit}>Add new Product</button>;
+
+    return (
+      <div>
+        {newProductInput}
+        {newProductAddButton}
+      </div>
+    );   
   }
 }
 
