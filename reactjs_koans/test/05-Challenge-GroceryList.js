@@ -108,4 +108,23 @@ describe("05 - Challenge - Grocery List", () => {
       assert.equal(groceryItem.props.className, "completed", "GroceriesListItem should be completed");
     });
   });
+
+  describe("Task #Addition - disabling add button", () => {
+
+    beforeEach( () => {
+      var elem = document.createElement('div');
+      elem = document.body.appendChild(elem);
+      component = React.render(React.createElement(GroceryListPart4), elem);
+    });
+
+    it('Should disable add button when newGroceryName is empty', () => {
+      let newProductInput = React.addons.TestUtils.findRenderedDOMComponentWithClass(component, "new-item");
+
+      React.addons.TestUtils.Simulate.change(newProductInput.getDOMNode(), { target: {value: "" }});
+
+      let newProductAddButton = React.addons.TestUtils.findRenderedDOMComponentWithClass(component, "add-product");
+
+      assert.equal(newProductAddButton.props.disabled, true, "Add button shouble be disable");
+    });
+  });
 });
