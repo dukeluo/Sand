@@ -101,7 +101,11 @@ class GroceryList extends React.Component {
         <ul>
           {groceriesComponents}
         </ul>
-        <AddGroceryItem onInputChange={this.inputChanged} onInputSubmit={this.addGroceryItem} />
+        <AddGroceryItem 
+          onInputChange={this.inputChanged}
+          onInputSubmit={this.addGroceryItem}
+          addButtonDisable={this.state.newGroceryName.length === 0}
+        />
         {clearListButton}
       </div>
     );
@@ -130,7 +134,7 @@ class AddGroceryItem extends React.Component {
 
   render() {
     let newProductInput = <input className='new-item' type="text" onChange={this.props.onInputChange}/>;
-    let newProductAddButton = <button className='add-product' onClick={this.props.onInputSubmit}>Add new Product</button>;
+    let newProductAddButton = <button className='add-product' onClick={this.props.onInputSubmit} disabled={this.props.addButtonDisable}>Add new Product</button>;
 
     return (
       <div>
