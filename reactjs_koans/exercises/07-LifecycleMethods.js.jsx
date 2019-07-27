@@ -56,6 +56,7 @@ class LifecycleMethodsComponent extends React.Component {
     // Task 1: Display a message "I'm mounted!" in developer's console when the
     //         component finishes mounting.
     //         Use `console.log` function for it.
+    console.log("I'm mounted!");
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -66,6 +67,7 @@ class LifecycleMethodsComponent extends React.Component {
     //         to previous values of properties and state.
     //         Think about it: Could you find a possible use case
     //                         for using previous state and properties values?
+    console.log("Updated!");
   }
 
   componentWillUnmount() {
@@ -77,6 +79,7 @@ class LifecycleMethodsComponent extends React.Component {
     //         you are listening for events. Your event listeners use setState
     //         directly. What will happen if you unmount the component?
     //         How can this lifecycle method help you to avoid such problems?
+    console.log("Goodbye, cruel world!");
   }
 
   render() {
